@@ -1,0 +1,4 @@
+.vercel
+vercel/
+memory/tokens.json
+memory/encrypted_tokens.bin
