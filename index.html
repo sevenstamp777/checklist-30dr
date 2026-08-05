@@ -13,8 +13,15 @@ tailwind.config = { theme: { extend: { fontFamily: { serif: ['Playfair Display',
 html{scroll-behavior:smooth}
 /* ===== SendPulse Form - Customização para manter o layout premium ===== */
 #form .sp-form-outer{ background: transparent !important; }
-#form .sp-form{ background: transparent !important; border: none !important; padding: 0 !important; box-shadow: none !important; max-width: 100% !important; }
-#form .sp-form-fields-wrapper{ gap: 16px !important; display: flex !important; flex-direction: column !important; }
+#form .sp-form{ background: transparent !important; border: none !important; padding: 0 !important; box-shadow: none !important; max-width: 720px !important; margin: 0 auto !important; }
+/* Ensure consistent box-sizing and prevent overlapping */
+#form .sp-form *{ box-sizing: border-box !important; }
+#form .sp-form .sp-form-fields-wrapper{ display: block !important; }
+#form .sp-form .sp-field{ width: 100% !important; min-width: 0 !important; box-sizing: border-box !important; }
+#form .sp-form-fields-wrapper{ gap: 16px !important; display: block !important; }
+/* Make each field stack and occupy full width on all viewports */
+#form .sp-field{ margin: 0 !important; background: transparent !important; width: 100% !important; box-sizing: border-box !important; }
+#form .sp-field input, #form .sp-field textarea{ width: 100% !important; display: block !important; }
 #form .sp-field{ margin: 0 !important; background: transparent !important; }
 #form .sp-field label{ font-family: 'Inter', sans-serif !important; font-size: 12px !important; font-weight: 600 !important; color: #3D2A20 !important; margin-bottom: 6px !important; text-transform: uppercase; letter-spacing: 0.05em; }
 #form .sp-field input, #form .sp-field input[type="text"], #form .sp-field input[type="email"], #form .sp-field input[type="tel"]{
@@ -110,7 +117,7 @@ html{scroll-behavior:smooth}
 <div class="max-w-[520px] mx-auto px-6">
 <div class="bg-cream rounded-[24px] p-8 border border-[#F0E0D0] shadow-xl">
 <h2 class="font-serif text-[28px] font-bold text-center leading-8">Baixe Agora Gratuitamente o Seu Checklist de 30 Dias de Restauração</h2>
-<p class="text-center text-sm opacity-70 mt-3">Digite seus dados abaixo e receba na hora no seu e-mail quandoamorfala@gmail.com</p>
+<p class="text-center text-sm opacity-70 mt-3">Digite seus dados abaixo e receba na hora no seu e-mail</p>
 
 <!-- FORMULÁRIO SENDPULSE INTEGRADO - Mantém 100% o layout premium -->
 <div class="mt-8">
