@@ -15,7 +15,12 @@ html{scroll-behavior:smooth}
 #form .sp-form-outer{ background: transparent !important; }
 #form .sp-form{ background: transparent !important; border: none !important; padding: 0 !important; box-shadow: none !important; max-width: 720px !important; margin: 0 auto !important; }
 /* Ensure consistent box-sizing and prevent overlapping */
-#form .sp-form *{ box-sizing: border-box !important; }
+#form .sp-form *{ box-sizing: border-box !important; max-width:100% !important; width:100% !important; }
+#form .sp-form-outer, #form .sp-form { width:100% !important; max-width:100% !important; min-width:0 !important; }
+#form iframe, #form .sp-form iframe{ width:100% !important; min-width:0 !important; display:block !important; }
+#form .sp-field{ display:block !important; width:100% !important; position:relative !important; }
+#form .sp-form-fields-wrapper{ display:block !important; gap:12px !important; }
+#form .sp-button{ display:block !important; width:100% !important; }
 #form .sp-form .sp-form-fields-wrapper{ display: block !important; }
 #form .sp-form .sp-field{ width: 100% !important; min-width: 0 !important; box-sizing: border-box !important; }
 #form .sp-form-fields-wrapper{ gap: 16px !important; display: block !important; }
@@ -114,7 +119,7 @@ html{scroll-behavior:smooth}
 </div>
 </section>
 <section id="form" class="py-20 bg-white">
-<div class="max-w-[520px] mx-auto px-6">
+<div class="max-w-[720px] mx-auto px-6">
 <div class="bg-cream rounded-[24px] p-8 border border-[#F0E0D0] shadow-xl">
 <h2 class="font-serif text-[28px] font-bold text-center leading-8">Baixe Agora Gratuitamente o Seu Checklist de 30 Dias de Restauração</h2>
 <p class="text-center text-sm opacity-70 mt-3">Digite seus dados abaixo e receba na hora no seu e-mail</p>
