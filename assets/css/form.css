@@ -110,6 +110,8 @@ html{scroll-behavior:smooth}
   font-family: 'Inter', sans-serif !important; 
   font-weight: 800 !important; 
   font-size: 16px !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
   border: none !important; 
   cursor: pointer !important; 
   box-shadow: 0 10px 20px rgba(182,94,45,0.25) !important;
@@ -119,6 +121,14 @@ html{scroll-behavior:smooth}
   display: block !important;
   margin: 0 !important;
   box-sizing: border-box !important;
+}
+
+/* The button's own .sp-field wrapper has no hidden error/tooltip spacer like
+   the text fields do, so it sits flush against the field above it. Give the
+   wrapper itself the top spacing instead of the button. */
+#form .sp-button-container,
+#form .sp-field:has(.sp-button) {
+  margin-top: 16px !important;
 }
 
 #form .sp-button:hover,
@@ -157,4 +167,83 @@ html{scroll-behavior:smooth}
 #form .sp-branding,
 #form .sp-recaptcha-message { 
   display: none !important; 
+}
+
+/* --- Phone field (SendPulse can wrap this in an extra container for the
+   country code / messenger integration) --- */
+#form .sp-field-phone,
+#form .sp-form-control-wrapper {
+  display: block !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+/* --- Flag / country-code widget on the phone field ---
+   SendPulse loads a third-party "intl-tel-input"-style plugin for phone
+   fields (flag + dial code shown before the number). By default this
+   plugin's wrapper is only as wide as its content, which is why the field
+   collapses into a small box with the flag/code overlapping the number.
+   Class names below cover the common naming patterns this type of widget
+   uses (iti, flag-container, selected-flag, country-list, dial-code). */
+#form .iti,
+#form [class*="iti__"],
+#form [class*="flag-container"],
+#form [class*="phone-container"],
+#form [class*="tel-container"] {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+#form .iti input,
+#form .iti input[type="tel"],
+#form [class*="iti__"] input,
+#form [class*="flag-container"] ~ input,
+#form [class*="phone-container"] input,
+#form [class*="tel-container"] input {
+  width: 100% !important;
+  height: auto !important;
+  padding: 16px 20px 16px 56px !important; /* extra left room for the flag/dial code */
+  box-sizing: border-box !important;
+}
+
+#form [class*="selected-flag"],
+#form [class*="flag-dropdown"] {
+  height: auto !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  z-index: 2 !important;
+}
+
+/* --- WhatsApp / messenger connect button ---
+   This form's SendPulse config has a messenger button tied to the phone
+   field (visible in SendPulse's own generated CSS as .sp-button-messengers).
+   Style it to match the rest of the design instead of SendPulse defaults. */
+#form .sp-button-messengers,
+#form .sp-field-messengers,
+#form .sp-messenger-button {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin-top: 12px !important;
+  padding: 16px 24px !important;
+  border-radius: 9999px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  border: 1px solid #E8DCCF !important;
+  background: white !important;
+  color: #3D2A20 !important;
+  box-sizing: border-box !important;
+  cursor: pointer !important;
+}
+
+#form .sp-button-messengers img,
+#form .sp-button-messengers svg {
+  width: 18px !important;
+  height: 18px !important;
 }
