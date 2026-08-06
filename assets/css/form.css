@@ -179,42 +179,20 @@ html{scroll-behavior:smooth}
 }
 
 /* --- Flag / country-code widget on the phone field ---
-   SendPulse loads a third-party "intl-tel-input"-style plugin for phone
-   fields (flag + dial code shown before the number). By default this
-   plugin's wrapper is only as wide as its content, which is why the field
-   collapses into a small box with the flag/code overlapping the number.
-   Class names below cover the common naming patterns this type of widget
-   uses (iti, flag-container, selected-flag, country-list, dial-code). */
-#form .iti,
-#form [class*="iti__"],
-#form [class*="flag-container"],
-#form [class*="phone-container"],
-#form [class*="tel-container"] {
+   SendPulse loads a third-party phone widget (flag + dial code shown before
+   the number). Keeping this minimal on purpose: only widen the outer
+   wrapper and give the input left padding. We are NOT touching the dropdown
+   list/country items here, since forcing width/display on those broke the
+   dropdown's own floating layout. */
+#form .iti {
   display: block !important;
   width: 100% !important;
-  box-sizing: border-box !important;
 }
 
-#form .iti input,
-#form .iti input[type="tel"],
-#form [class*="iti__"] input,
-#form [class*="flag-container"] ~ input,
-#form [class*="phone-container"] input,
-#form [class*="tel-container"] input {
+#form .iti input[type="tel"] {
   width: 100% !important;
-  height: auto !important;
   padding: 16px 20px 16px 56px !important; /* extra left room for the flag/dial code */
   box-sizing: border-box !important;
-}
-
-#form [class*="selected-flag"],
-#form [class*="flag-dropdown"] {
-  height: auto !important;
-  top: 0 !important;
-  bottom: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  z-index: 2 !important;
 }
 
 /* --- WhatsApp / messenger connect button ---
