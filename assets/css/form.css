@@ -4,6 +4,10 @@
 
 html{scroll-behavior:smooth}
 
+/* Keep the SendPulse form hidden until the loader.js script shows it.
+   Without this, the raw (unstyled) markup flashes before load. */
+.sp-force-hide { display: none; }
+
 #form { width: 100%; box-sizing: border-box; overflow: visible; }
 #form .sp-form-outer { 
   background: transparent !important; 

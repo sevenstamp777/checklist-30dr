@@ -1,4 +1,8 @@
 .vercel
 vercel/
+node_modules/
+files/
+screenshots/
+teste-procurador/
 memory/tokens.json
 memory/encrypted_tokens.bin
