@@ -124,6 +124,7 @@ html{scroll-behavior:smooth}
   letter-spacing: 0.02em;
   display: block !important;
   margin: 0 !important;
+  height: auto !important;
   box-sizing: border-box !important;
 }
 
