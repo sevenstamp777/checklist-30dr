@@ -1,0 +1,19 @@
+{
+  "defaults": {
+    "board": "Restauração de Casamento",
+    "utm": "utm_source=pinterest&utm_medium=pin"
+  },
+  "pins": [
+    {
+      "id": "restauracao-001",
+      "board": "Restauração de Casamento",
+      "imageUrl": "https://checklist.transformandovidas.net.br/imagens/quando_o_amor_fala_pin1.jpeg",
+      "title": "Restauração de Casamento em 30 Dias — Quando o Amor Fala",
+      "description": "Um passo por dia para reconstruir seu casamento com oração, perdão e atitudes práticas. Baixe o checklist gratuito do Quando o Amor Fala e comece hoje.",
+      "alt_text": "Pin com a arte do Quando o Amor Fala convidando a baixar o checklist de 30 dias de restauração de casamento",
+      "link": "https://checklist.transformandovidas.net.br/?utm_source=pinterest&utm_medium=pin&utm_campaign=restauracao&utm_content=restauracao-001",
+      "publishDate": "2026-08-09",
+      "status": "draft"
+    }
+  ]
+}
